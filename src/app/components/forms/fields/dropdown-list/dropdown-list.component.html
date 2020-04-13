@@ -1,0 +1,17 @@
+<mat-form-field>
+  <app-label [title]="field.model.title" [class]="field.model.labelCssClass"></app-label>
+  <select
+    matNativeControl
+    [ngClass]="field.model.cssClass" 
+    [id]="field.valueField.id" 
+    [name]="field.valueField.name"
+    (change)="onChange($event)"
+    (focus)="onFocus($event)"
+    (blur)="onBlur($event)">
+
+    <option *ngIf="field.model.showEmptyItem"></option>
+    <option *ngFor="let option of items;" [value]="option.value">
+      {{option.text}}
+    </option>
+  </select>
+</mat-form-field>
