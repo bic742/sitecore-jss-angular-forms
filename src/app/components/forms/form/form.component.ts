@@ -3,10 +3,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 import {
   serializeForm,
   submitForm,
-  // instanceOfValueFormField,
-  // getFieldValueFromModel,
   SitecoreForm,
-  FormField,
   FormFetcher,
   TrackerFetcher,
   ValueFormField,
@@ -58,7 +55,6 @@ export class FormComponent implements FormProps {
   }
 
   public form: SitecoreForm;
-  public fields: FormField[];
   public formErrors: string[];
   
   public sitecoreApiHost = environment.sitecoreApiHost;
@@ -85,8 +81,6 @@ export class FormComponent implements FormProps {
 
   public ngOnInit(): void { 
     this.form = this.formState.state.nextForm || this.rendering.fields as unknown as SitecoreForm;
-    this.fields = this.form.fields;
-
     this.formGroup = this.createControl();
 
     this._tracker.setFormData(this.form.formItemId.value, this.form.formSessionId.value, this.form.metadata.isTrackingEnabled);
@@ -96,7 +90,7 @@ export class FormComponent implements FormProps {
 
   createControl() {
     const group = this.formBuilder.group({});
-    this.fields.forEach(field => {
+    this.form.fields.forEach(field => {
       if (field.model.fieldTypeItemId === FieldTypes.Button) return;
 
       const castField = field as ValueFormField;

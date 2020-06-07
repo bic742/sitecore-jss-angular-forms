@@ -1,7 +1,8 @@
 <app-label [title]="field.model.title" [class]="field.model.labelCssClass"></app-label>
 
-<mat-radio-group aria-label="Select an option">
-  <mat-radio-button *ngFor="let option of items; let idx = index;"
+<div aria-label="Select an option">
+  <input *ngFor="let option of items; let idx = index;"
+    type="radio"
     [ngClass]="field.model.cssClass" 
     [id]="field.valueField.id + idx" 
     [name]="field.valueField.name"
@@ -9,5 +10,5 @@
     [checked]="option.selected"
     (change)="onChange($event)"
     (focus)="onFocus($event)"
-    (blur)="onBlur($event)">{{option.text}}</mat-radio-button>
-</mat-radio-group>
+    (blur)="onBlur($event)" />{{option.text}}
+</div>

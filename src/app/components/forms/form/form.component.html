@@ -6,7 +6,7 @@
     </li>
   </ul>
 
-  <ng-template *ngFor="let field of fields;" dynamicField [tracker]="_tracker" [field]="field" [group]="formGroup"></ng-template>
+  <ng-template *ngFor="let field of form.fields;" dynamicField [tracker]="_tracker" [field]="field" [group]="formGroup"></ng-template>
 </form>
 
 <div class="form" style="padding: 2rem;">

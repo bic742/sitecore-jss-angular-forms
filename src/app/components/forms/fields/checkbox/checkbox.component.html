@@ -1,14 +1,13 @@
+<input
+  type="checkbox"
+  [ngClass]="field.model.cssClass" 
+  [id]="field.valueField.id" 
+  [name]="field.valueField.name"
+  (change)="onChange($event)"
+  (focus)="onFocus($event)"
+  (blur)="onBlur($event)" />
+<app-label [title]="field.model.title" [class]="field.model.labelCssClass"></app-label>
 
-  <!-- <app-label [title]="field.model.title" [class]="field.model.labelCssClass"></app-label> -->
-  <mat-checkbox 
-    [ngClass]="field.model.cssClass" 
-    [id]="field.valueField.id" 
-    [name]="field.valueField.name"
-    (change)="onChange($event)"
-    (focus)="onFocus($event)"
-    (blur)="onBlur($event)" 
-  >{{field.model.title}}</mat-checkbox>
-  
-  <!-- <ng-container *ngFor="let validation of field.validations;" ngProjectAs="mat-error">
-    <mat-error *ngIf="group.get(field.name).hasError(validation.name)">{{validation.message}}</mat-error>
-  </ng-container> -->
+<!-- <ng-container *ngFor="let validation of field.validations;" ngProjectAs="mat-error">
+  <mat-error *ngIf="group.get(field.name).hasError(validation.name)">{{validation.message}}</mat-error>
+</ng-container> -->
