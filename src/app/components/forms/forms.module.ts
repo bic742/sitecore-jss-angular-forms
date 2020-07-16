@@ -1,11 +1,8 @@
 import { NgModule, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core';
-import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ROUTES } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { JssModule, DYNAMIC_COMPONENT } from '@sitecore-jss/sitecore-jss-angular';
-import { IhcCustomIconModule } from '../../../services/ui/custom-icon.service';
-import { MatRippleModule } from '@angular/material';
 
 import { DynamicFieldDirective } from './directives/dynamic-field/dynamic-field.directive';
 import { ReplaceTagDirective } from './directives/replace-tag/replace-tag.directive';
@@ -37,11 +34,7 @@ import { FormStateService } from './services/form-state.service';
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule,
     JssModule,
-    IhcCustomIconModule,
-    CommonModule,
-    MatRippleModule,
     {
       ngModule: JssModule,
       providers: [
