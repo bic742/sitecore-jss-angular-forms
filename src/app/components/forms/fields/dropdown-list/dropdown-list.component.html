@@ -3,8 +3,10 @@
   [ngClass]="field.model.cssClass" 
   [id]="field.valueField.id" 
   [name]="field.valueField.name"
-  (change)="onChange($event)" (focus)="onFocus($event)" (blur)="onBlur($event)">
-
+  [value]="field.model.value"
+  (change)="onChange($event)" 
+  (focus)="onFocus($event)" 
+  (blur)="onBlur($event)">
   <option *ngIf="field.model.showEmptyItem"></option>
   <option *ngFor="let option of items;" [value]="option.value">
     {{option.text}}
