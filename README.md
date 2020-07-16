@@ -11,8 +11,8 @@ Check out my blog post on details for the implementation: [Implementation Detail
 1. Clone the repository
 2. Add the forms folder to a component location in your JSS application
 3. Update the `form.component.ts` to point to a location that contains references for the following values 
--- `sitecoreApiHost`
--- `sitecoreApiKey`
+    - `sitecoreApiHost`
+    - `sitecoreApiKey`
 4. Register the form component in your app
 5. Create a Form rendering in Sitecore
 6. Profit!
