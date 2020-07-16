@@ -12,7 +12,7 @@ import {
 import { FieldTypes } from '../FieldTypes';
 import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
 import { DynamicFieldDirective } from '../directives/dynamic-field/dynamic-field.directive';
-import { environment } from '../../../../../environments/environment';
+import { environment } from '../../../../environment';
 import { FieldState, FormStateService, FieldStateCollection } from '../services/form-state.service';
 
 export interface ErrorComponentProps {
@@ -145,7 +145,7 @@ export class FormComponent implements FormProps {
       throw new Error('Submit URL was not defined. Ensure the form has an action attribute.');
     }
 
-    submitForm(formData, submitUrl, { fetcher: this.formFetcher })
+    submitForm(formData, submitUrl)
       .then((result) => {
         this.form = result.nextForm;
 
