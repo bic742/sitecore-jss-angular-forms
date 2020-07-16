@@ -3,6 +3,7 @@
   [ngClass]="field.model.cssClass" 
   [id]="field.valueField.id" 
   [name]="field.valueField.name"
+  [checked]="field.model.value"
   (change)="onChange($event)"
   (focus)="onFocus($event)"
   (blur)="onBlur($event)" />
