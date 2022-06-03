@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/bic742/sitecore-jss-angular-forms#readme",
   "devDependencies": {
-    "@angular/core": "^9.1.9",
+    "@angular/core": "^11.0.5",
     "@angular/forms": "^9.1.9",
     "@sitecore-jss/sitecore-jss-angular": "^13.0.2",
     "@sitecore-jss/sitecore-jss-forms": "^13.0.5"
